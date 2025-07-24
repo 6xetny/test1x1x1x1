@@ -40,7 +40,7 @@ def menu_docentes():
     while True:
         opciones_docentes = leer_datos(script_menu_docentes)
         tabla_menu_docente = PrettyTable()
-        tabla_menu_docente.field_names = ['N°','Opción'] # pipe
+        tabla_menu_docente.field_names = ['N°','Opción'] 
         if opciones_docentes != None:
             for opcion_docente in opciones_docentes:
                 tabla_menu_docente.add_row(opcion_docente)  # type: ignore

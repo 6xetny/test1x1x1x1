@@ -40,7 +40,7 @@ def editar_docente():
     try:
         id_docente = int(input('Ingrese el ID del docente a editar: '))
     except ValueError:
-        print('ID inválido.') # pipe
+        print('ID inválido.') 
         return
     nuevo_rut = input('Ingrese el nuevo RUT del docente: ').strip()
     nuevo_nombre = input('Ingrese el nuevo nombre del docente: ').strip()
@@ -65,7 +65,7 @@ def eliminar_docente():
         print('ID inválido.')
         return
     consulta = '''
-        DELETE FROM docentes WHERE id=%s
+        UPDATE docentes set habilitado= 0 WHERE id=%s
     '''
     valores = (id_docente,)
     insertar_datos(consulta, valores)
